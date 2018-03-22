@@ -51,7 +51,7 @@
                 display: table;
                 clear: both;
             }
-            
+
             /*Defining buttons with images*/
             .button {
                 background-color: white; /* This is whitesmoke so as to mask the artefacts around the buttons */
@@ -69,7 +69,7 @@
                 padding-bottom: 10px;
                 padding-left: 10%;
             }
-            
+
             /* Defining buttons to toggle map */
             .Map-Toggler{
                 background-color: white; /* This is whitesmoke so as to mask the artefacts around the buttons */
@@ -93,7 +93,7 @@
                 border-radius: 20px;
                 transform: translate(212.5%,-60%);
             }
-            
+
             .Map-Toggler:hover {
                 background-color: whitesmoke;
                 opacity: 1;
@@ -241,7 +241,7 @@
             .details{
                 color:black;
             }
-            
+
             .details-country{
                 display: block;
                 text-align: center;
@@ -286,7 +286,7 @@
             }
 
             text.title {
-              
+
             }
 
             .subject{
@@ -295,43 +295,43 @@
                 fill-opacity: 1;
 
             }
-            
+
             /*Legend Stuff*/
             .label{
                 font-size: 10px;
-                transform: translate(30px,30px) rotate(-45deg); 
+                transform: translate(30px,30px) rotate(-45deg);
                 fill: #757a82;
             }
-            
+
             .legendTitle{
                 font-weight: bold;
                 transform: translate(0px,0px);
                 fill: #757a82;
                 font-size: 12px;
             }
-            
+
             #mapheader{
                 color: #757a82;
                 transform: translate(0px, 20px);
             }
-            
+
             #ending{
                 height:400px;
                 height:auto;
                 min-height:300px;
                 margin:0 auto;
-                
+
 
                 width:100%;
-                background-color:rgb(241,241,241);  
+                background-color:rgb(241,241,241);
                 border-bottom-right-radius:2em;
                 border-bottom-left-radius:2em;
                 border-top-left-radius:2em;
                 border-top-right-radius:2em;
 
-                font-size: 16px; 
+                font-size: 16px;
                 font-family: sans-serif;
-                line-height: 70%;   
+                line-height: 70%;
 
             }
 
@@ -352,32 +352,36 @@
                 width:80%;
                 padding-top: 2px;
                 font-family: sans-serif;
-                line-height: 20px;    
+                line-height: 20px;
             }
-            
+
             #code-sources{
                 width: 25%;
                 /*transform: translate(1000px, -100px)*/
             }
-            
+
             #submitted{
                 width: 25%;
             }
-            
+
             #data{
                 width: 25%;
             }
-            
+
             #relevent{
                 width: 25%
             }
-            
+
             .footer{
                 margin-top: 20px;
                 transform: translate(0%,20%);
             }
-            
-            
+
+            #imageText{
+              transform: translate(10%, 150%);
+            }
+
+
         </style>
 
     </head>
@@ -433,12 +437,15 @@
 
                 <h2></h2>
                 <div id="image">
-                    <img id="animalimage" style ="position: relative; transform: translate(10%,30%); opacity: 0.6" src="images/tiger.png"/>
+                    <img id="animalimage" style ="position: relative; transform: translate(10%,10%); opacity: 0.6" src="images/tiger.png"/>
                     <!img class = "Elephant imghidden" style ="position: relative; transform: translate(10%,-60%)" src="images/elephant.png"/>
                     <!img class = "Rhino imghidden" style ="position: relative; transform: translate(15%, -200%)" src="images/rhino.png"/>
-                    <!img class = "Parrot imghidden" style ="position: relative; transform: translate(30%, -350%)" src="images/greyparrot.png"/>    
+                    <!img class = "Parrot imghidden" style ="position: relative; transform: translate(30%, -350%)" src="images/greyparrot.png"/>
+                    <h2 id="imageText"></h2>
+                    <h3 id= "imageText1"></h3>
+
                 </div>
-                <svg style="width: 450px; height: 540px; position: relative; transform: translate(-5%,-85%)"></svg>
+                <svg style="width: 450px; height: 540px; position: relative; transform: translate(10%,-115%)"></svg>
 
             </div>
             <div class="columnMap">
@@ -447,28 +454,28 @@
                 <svg class = "Map-Container" style = "height: 341px"></svg>
                 <svg class = "Map-Legend" style = "width: 100%; height:150px; transform: translate(5%,0%)"></svg>
                 <div style="width: 100%; height: 10%">
-                    
+
                     <button class="Map-Toggler Origin">Origin</button>
                     <button class="Map-Toggler Importers">Importers</button>
                     <button class="Map-Toggler Exporters">Exporters</button>
-                
+
                 </div>
             </div>
 
         </div>
-        
+
         <div id ="ending" class="footer">
-        
-            <div id = "endingtext"> 
-            
+
+            <div id = "endingtext">
+
                 <p><b>Created by: </b>Karthik Balakrishna, Ishaan Paranjape, Pranav Yerabati</p>
-                <p><b>In Collaboration with </b>Professor Suresh Lodha</p>                
+                <p><b>In Collaboration with </b>Professor Suresh Lodha</p>
                 <p><b>For:</b> CMPS 263, Winter 18</p>
-            
+
             </div>
-            
+
             <div class="columnFooter">
-            
+
                 <p><em>Files Submitted</em></p>
                     <ul>
                         <li>Data collected from <a href="https://trade.cites.org/#">Cites Database</a> </li>
@@ -477,10 +484,10 @@
 
                         <li><a href = "https://www.havocscope.com/illegal-wildlife-trade/">Illegal Trade</a></li>
                     </ul>
-                
+
             </div>
             <div class="columnFooter">
-            
+
                 <p><em>Data Sources</em></p>
                     <ul>
                         <li>Data collected from <a href="https://trade.cites.org/#">Cites Database</a></li>
@@ -489,10 +496,10 @@
 
                         <li><a href = "https://www.havocscope.com/illegal-wildlife-trade/">Illegal Trade</a></li>
                     </ul>
-                
+
             </div>
             <div class="columnFooter">
-            
+
                 <p><em>Relevant Visualisations</em></p>
                     <ul>
                         <li>Data collected from <a href="https://trade.cites.org/#">Cites Database</a> </li>
@@ -501,10 +508,10 @@
 
                         <li><a href = "https://www.havocscope.com/illegal-wildlife-trade/">Illegal Trade</a></li>
                     </ul>
-                
+
             </div>
             <div class="columnFooter">
-            
+
                 <p><em>Code Sources</em></p>
                     <ul>
                         <li>Data collected from <a href="https://trade.cites.org/#">Cites Database</a> </li>
@@ -513,29 +520,29 @@
 
                         <li><a href = "https://www.havocscope.com/illegal-wildlife-trade/">Illegal Trade</a></li>
                     </ul>
-                
+
             </div>
-        
+
         </div>
 
         <div id="ending" style="transform: translate(0,200px)">
-            
+
             <div class = "row">
             </div>
-       
-             
-            
+
+
+
             <div id="references" style="margin-left: 20px; line-height: 1.25; float: left">
-                
+
                 <div id="submitted"><p><em>Files Submitted</em></p>
-                
+
                     <ul>
-                    
-                
+
+
                     </ul>
-                    
+
                 </div>
-                
+
                 <div id="data" style="transform: translate(450px, -40px) ">
                     <p><em>Data Sources</em></p>
                     <ul>
@@ -558,31 +565,31 @@
                     </ul>
 
                 </div>
-            
+
                 <div id="code-sources" style="transform: translate(1000px,-100px)">
-                
+
                     <p><em>COde Sources</em></p>
-                
-                
+
+
                     <ul>
-                    
+
                         <li></li>
-                
+
                     </ul>
-                
-            
+
+
                 </div>
-            
+
             </div>
-            
+
         </div>
-        
+
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="https://d3js.org/queue.v1.min.js"></script>
         <script src="https://d3js.org/topojson.v1.min.js"></script>
         <script src="https://d3js.org/d3-geo.v1.min.js"></script>
         <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.5/d3-legend.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.5/d3-legend.min.js"></script>
         <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
         <script src="d3-tip.js"></script>
         <script src="index.js"></script>

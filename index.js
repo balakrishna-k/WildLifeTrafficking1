@@ -125,8 +125,8 @@ const annotationsTiger = [
   subject: {
     radius: 7
   },
-  x: 80,
-  y: 425,
+  x: 90,
+  y: 445,
   dy: 30,
   dx: 40
 },
@@ -141,8 +141,8 @@ const annotationsTiger = [
   subject: {
     radius: 7
   },
-  x: 355,
-  y: 360,
+  x: 360,
+  y: 390,
   dy: 50,
   dx: -50
 },
@@ -158,10 +158,42 @@ const annotationsTiger = [
     radius: 7
   },
   x: 360,
-  y: 310,
+  y: 340,
   dy: -100,
   dx: -100
-},].map(function(d){ d.color = "#D81E05"; return d});
+},
+{
+  type: d3.annotationCalloutCircle,
+  note: {
+    label: "Tiger Skin is used to make winter clothing and various other products",
+    title: "SKIN",
+    wrap: 100
+  },
+  //settings for the subject, in this case the circle radius
+  subject: {
+    radius: 7
+  },
+  x: 230,
+  y: 320,
+  dy: -100,
+  dx: -100
+},
+{
+  type: d3.annotationCalloutCircle,
+  note: {
+    label: "Live Tigers are used to keep as pets or as entertainment",
+    title: "LIVE BODY",
+    wrap: 100
+  },
+  //settings for the subject, in this case the circle radius
+  subject: {
+    radius: 7
+  },
+  x: 150,
+  y: 340,
+  dy: -100,
+  dx: 100
+}].map(function(d){ d.color = "#D81E05"; return d});
 
 const annotationsElephant = [
 {
@@ -173,12 +205,12 @@ const annotationsElephant = [
   },
   //settings for the subject, in this case the circle radius
   subject: {
-    radius: 5
+    radius: 7
   },
-  x: 325,
-  y: 375,
-  dy: -10,
-  dx: 30
+  x: 300,
+  y: 255,
+  dy: -50,
+  dx: 50
 },
 {
   type: d3.annotationCalloutCircle,
@@ -189,11 +221,11 @@ const annotationsElephant = [
   },
   //settings for the subject, in this case the circle radius
   subject: {
-    radius: 5
+    radius: 7
   },
-  x: 213,
-  y: 222,
-  dy: -50,
+  x: 150,
+  y: 395,
+  dy: 50,
   dx: -50
 },
 {
@@ -205,12 +237,28 @@ const annotationsElephant = [
   },
   //settings for the subject, in this case the circle radius
   subject: {
-    radius: 5
+    radius: 7
   },
-  x: 10,
-  y: 270,
-  dy: -100,
-  dx: 100
+  x: 110,
+  y: 170,
+  dy: -80,
+  dx: 80
+},
+{
+  type: d3.annotationCalloutCircle,
+  note: {
+    label: "Elephant trunk is used in traditional Chinese medicine",
+    title: "TRUNK",
+    wrap: 100
+  },
+  //settings for the subject, in this case the circle radius
+  subject: {
+    radius: 7
+  },
+  x: 320,
+  y: 355,
+  dy: 30,
+  dx: 30
 },
 ].map(function(d){ d.color = "#D81E05"; return d});
 
@@ -226,10 +274,10 @@ const annotationsRhino = [
   subject: {
     radius: 7
   },
-  x: 310,
-  y: 300,
-  dy: -120,
-  dx: -120
+  x: 330,
+  y: 330,
+  dy: 40,
+  dx: 40
 },
 {
   type: d3.annotationCalloutCircle,
@@ -240,12 +288,44 @@ const annotationsRhino = [
   },
   //settings for the subject, in this case the circle radius
   subject: {
-    radius: 5
+    radius: 7
   },
   x: 213,
-  y: 222,
-  dy: -50,
-  dx: -50
+  y: 245,
+  dy: -30,
+  dx: -30
+},
+{
+  type: d3.annotationCalloutCircle,
+  note: {
+    label: "Rhino feet are used as trophies",
+    title: "FEET",
+    wrap: 100
+  },
+  //settings for the subject, in this case the circle radius
+  subject: {
+    radius: 7
+  },
+  x: 250,
+  y: 510,
+  dy: -20,
+  dx: 20
+},
+{
+  type: d3.annotationCalloutCircle,
+  note: {
+    label: "Rhino skin is used for various leather products like covers, wallets etc.",
+    title: "RHINO SKIN",
+    wrap: 100
+  },
+  //settings for the subject, in this case the circle radius
+  subject: {
+    radius: 7
+  },
+  x: 113,
+  y: 290,
+  dy: -80,
+  dx: 80
 },
 ].map(function(d){ d.color = "#D81E05"; return d});
 
@@ -261,10 +341,26 @@ const annotationsGreyParrot = [
   subject: {
     radius: 7
   },
-  x: 200,
-  y: 230,
+  x: 240,
+  y: 330,
   dy: -50,
   dx: 50
+},
+{
+  type: d3.annotationCalloutCircle,
+  note: {
+    label: "The feathers of a grey parrot are popular and sold primarily for their unique grey and orange colors.",
+    title: "FEATHERS",
+    wrap: 100
+  },
+  //settings for the subject, in this case the circle radius
+  subject: {
+    radius: 7
+  },
+  x: 200,
+  y: 400,
+  dy: -50,
+  dx: -50
 },
 ].map(function(d){ d.color = "#D81E05"; return d});
 
@@ -283,6 +379,14 @@ d3.select("svg")
   .call(makeAnnotationsTiger);
 
 d3.select(".annotationTiger").selectAll("g.annotation-connector, g.annotation-note, g.annotations.callout.circle").classed("hidden", true);
+d3.select("#imageText")
+   .text("Tiger")
+   .style("transform", "translate(10%, 65%)")
+   .style("font-weight", "bold");
+d3.select("#imageText1")
+   .text("Parts Traded The Most")
+   .style("transform", "translate(40%, 65%)")
+   .style("font-weight", "bold");
 
 const makeAnnotationsElephant = d3.annotation()
     .type(d3.annotationLabel)
@@ -463,16 +567,16 @@ d3.select(".BTiger").on("click", function(){
     togElephant = false;
     togRhino = false;
     togParrot = false;
-    
+
     console.log("Tiger");
     d3.select("#animalimage").attr("src","images/tiger.png").style("opacity","0").transition().duration(800).style("opacity","0.6");
     // Change map header to correct one
     d3.select("#mapheader").text("Origin of Tiger Bone Products");
     // Changing scale
     colors.domain([0,400]);
-    
+
     legend.title("Number of Tiger Bone Products")
-    
+
     svgLegend.select(".legend")
     .call(legend);
 
@@ -482,9 +586,15 @@ d3.select(".BTiger").on("click", function(){
     d3.select(".annotationTiger").selectAll("g.annotation-connector, g.annotation-note").classed("hidden", true);
     d3.select(".annotationElephant").classed("hidden", true);
     d3.select(".annotationRhino").classed("hidden", true);
-
-
-
+    d3.select("#animalimage").style("transform", "translate(10%,10%)");
+    d3.select("#imageText")
+       .text("Tiger")
+       .style("transform", "translate(10%, 65%)")
+       .style("font-weight", "bold");
+    d3.select("#imageText1")
+       .text("Parts Traded The Most")
+       .style("transform", "translate(40%, 65%)")
+       .style("font-weight", "bold");
     queue()
        .defer(d3.json, "world_map.json")
        .defer(d3.csv, "csvFiles/Animals/origin/tiger_origin_2016.csv")
@@ -501,25 +611,31 @@ d3.select(".BElephant").on("click", function(){
 
     d3.select("#animalimage").attr("src","images/elephant.png").style("opacity","0").transition().duration(800).style("opacity","0.6");
     console.log("Elephant");
-    
+
     // Change map header to correct one
     d3.select("#mapheader").text("Origin of Ivory Products");
-    
+
     // Demo to change scale
     colors.domain([0,150]);
     legend.title("Number of Ivory Products")
     svgLegend.select(".legend")
     .call(legend);
-    
-    
+
+
     d3.select(".annotationTiger").classed("hidden", true);
     d3.select(".annotationRhino").classed("hidden", true);
     d3.select(".annotationGreyParrot").classed("hidden", true);
     d3.select(".annotationElephant").classed("hidden", false);
     d3.select(".annotationElephant").selectAll("g.annotation-connector, g.annotation-note").classed("hidden", true);
-
-
-
+    d3.select("#animalimage").style("transform", "translate(20%,-5%)");
+    d3.select("#imageText")
+       .text("Elephant")
+       .style("transform", "translate(10%, -5%)")
+       .style("font-weight", "bold");
+    d3.select("#imageText1")
+       .text("Parts Traded The Most")
+       .style("transform", "translate(40%, -5%)")
+       .style("font-weight", "bold");
     queue()
        .defer(d3.json, "world_map.json")
        .defer(d3.csv, "csvFiles/Animals/origin/elephant_origin_2016.csv")
@@ -532,11 +648,11 @@ d3.select(".BRhino").on("click", function(){
     togElephant = false;
     togRhino = true;
     togParrot = false;
-    
+
     console.log("Rhino");
     d3.select("#animalimage").attr("src","images/rhino.png").style("opacity","0").transition().duration(800).style("opacity","0.6");
     d3.select("#mapheader").text("Origin of Rhino Horn Products");
-    
+
     // Demo to change scale
     colors.domain([0,150]);
     legend.title("Number of Rhino Horn Products")
@@ -548,6 +664,16 @@ d3.select(".BRhino").on("click", function(){
     d3.select(".annotationGreyParrot").classed("hidden", true);
     d3.select(".annotationRhino").classed("hidden", false);
     d3.select(".annotationRhino").selectAll("g.annotation-connector, g.annotation-note").classed("hidden", true);
+    d3.select("#animalimage").style("transform", "translate(20%,10%)");
+    d3.select("#imageText")
+       .text("Rhino")
+       .style("transform", "translate(10%, 75%)")
+       .style("font-weight", "bold");
+    d3.select("#imageText1")
+       .text("Parts Traded The Most")
+       .style("transform", "translate(40%, 75%)")
+       .style("font-weight", "bold");
+
 
 
     queue()
@@ -580,6 +706,16 @@ d3.select(".BParrot").on("click", function(){
     d3.select(".annotationRhino").classed("hidden", true);
     d3.select(".annotationGreyParrot").classed("hidden", false);
     d3.select(".annotationGreyParrot").selectAll("g.annotation-connector, g.annotation-note").classed("hidden", true);
+    d3.select("#animalimage").style("transform", "translate(50%,10%)");
+    d3.select("#imageText")
+       .text("Grey Parrot")
+       .style("transform", "translate(10%, 75%)")
+       .style("font-weight", "bold");
+    d3.select("#imageText1")
+       .text("Parts Traded The Most")
+       .style("transform", "translate(40%, 75%)")
+       .style("font-weight", "bold");
+
 
 
 
@@ -630,10 +766,10 @@ d3.select(".Origin").on("click", function(){
 
     }
     else if(togRhino){
-        
+
         // Change map header to correct one
         d3.select("#mapheader").text("Origin of Rhino Horn Products");
-        
+
         // Demo to change scale
         colors.domain([0,150]);
         legend.title("Number of Rhino Horn Products")
